@@ -1,0 +1,7 @@
+this is some sample text to compress
+
+hello these are some specail characters 
+~!@#$%^&*()_+<>?":}{"
+
+numbers also 
+0123456789
