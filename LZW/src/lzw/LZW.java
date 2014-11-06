@@ -60,15 +60,17 @@ public class LZW {
         String pre = "" , cur = "";
         for(int i = 0 ; i < codes.length ; i++){
             int current_index = Integer.valueOf(codes[i]);
+            String curS = "";
             if(current_index == dictionary.size()){
-                dictionary.add(pre + pre.charAt(0));
+                curS = pre + pre.charAt(0); 
+            }else{
+                curS = dictionary.get(current_index);
             }
-            cur = dictionary.get(current_index);
-            ret += cur;
+            ret += curS;
             if(pre.length() > 0){
-                dictionary.add(pre + cur.charAt(0));
+                dictionary.add(pre + curS.charAt(0));
             }
-            pre = cur;
+            pre = curS;
         }
         return ret;
     }
