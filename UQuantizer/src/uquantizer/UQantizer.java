@@ -32,7 +32,7 @@ public class UQantizer {
     public static BinaryBuffer compress(int[][] pixels){
         BinaryBuffer binaryBuffer = new BinaryBuffer();
         for (int i = 0; i < pixels.length; i++) {
-            for (int j = 0; j < pixels.length; j++) {
+            for (int j = 0; j < pixels[i].length; j++) {
                 int pixel = pixels[i][j];
                 int code = pixel / quantizationStep;
                 binaryBuffer.add(code,numberOfBits);
